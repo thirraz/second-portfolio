@@ -2,9 +2,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
     grid-template-rows: min-content repeat(3, 28rem);
+    justify-content: center;
     grid-auto-rows: 28rem;
     gap: 2rem;
-    padding: 0 3rem;
+    // padding: 0 3rem;
     margin-bottom: 6rem;
 
     max-width: 80%;
@@ -12,10 +13,10 @@
     min-height: 100vh;
 
     //remove transform with media queries (DON'T FORGET)
-    transform: translateX(7%);
+    transform: translateX(10%);
 
     @include for-phones {
-        transform: translateX(-5%);
+        transform: translateX(16%);
     }
 
     &__heading {

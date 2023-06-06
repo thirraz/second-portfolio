@@ -5,7 +5,9 @@ html {
 body {
     background: var(--color-background);
     display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: 95vh min-content;
+    justify-content: center;
 
     @include for-tablet-landscape {
         padding: 0 3rem;
