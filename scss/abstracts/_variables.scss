@@ -1,0 +1,13 @@
+:root {
+    // color
+    --color-black: #000;
+    --color-grey: #272727;
+    --color-background: #e2e2e2;
+
+    // fonts
+    --font-heading: "DM Serif Display", serif;
+    --font-text: "DM Sans", sans-serif;
+
+    // font-size
+    --font-size-heading: clamp(2rem, 6rem, 7rem);
+}

@@ -1,0 +1,110 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 13rem;
+    width: 13rem;
+    min-height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    text-align: center;
+
+    box-shadow: -3px 10px 7px rgba(0, 0, 0, 0.3);
+
+    @include for-tablet-landscape {
+        box-shadow: none;
+        background: var(--color-background);
+        z-index: 100;
+        border-left: 2px solid #000;
+        transition: transform 0.5s ease-out;
+
+        transform: translateX(100%);
+    }
+
+    &__message {
+        font-family: var(--font-text);
+        font-size: 1.2rem;
+        padding: 0 1rem;
+
+        position: absolute;
+        bottom: 10%;
+    }
+
+    i[class*="fa"]::after {
+        font-family: var(--font-text);
+        font-size: 1.1rem;
+        text-transform: uppercase;
+
+        position: absolute;
+        z-index: 30;
+        bottom: 0%;
+        right: 50%;
+        transform: translateX(50%);
+        transition: bottom 0.2s ease-out, opacity 0.5s ease-out;
+        opacity: 0;
+    }
+
+    &__social {
+        font-family: var(--font-text);
+        font-size: 2.1rem;
+        position: relative;
+        z-index: 50;
+        cursor: pointer;
+        padding: 0.8rem;
+
+        //twitter
+
+        &:nth-child(1):hover::after {
+            opacity: 1;
+            bottom: -40%;
+        }
+        //instagram
+        &:nth-child(2):hover::after {
+            opacity: 1;
+            bottom: -40%;
+        }
+        //linkedin
+
+        &:nth-child(3):hover::after {
+            opacity: 1;
+            bottom: -40%;
+        }
+        //github
+
+        &:nth-child(4):hover::after {
+            opacity: 1;
+            bottom: -40%;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #000;
+
+        &:not(:last-child) {
+            margin-bottom: 2.5rem;
+        }
+
+        &:nth-child(1) > .fa-brands::after {
+            content: "twitter";
+        }
+        &:nth-child(2) > .fa-brands::after {
+            content: "instagram";
+        }
+        &:nth-child(3) > .fa-brands::after {
+            content: "linkedin";
+        }
+        &:nth-child(4) > .fa-brands::after {
+            content: "github";
+        }
+
+        @include for-phones {
+            &:nth-child(4) {
+                margin-bottom: 15rem;
+            }
+        }
+    }
+}

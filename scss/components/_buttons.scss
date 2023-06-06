@@ -1,0 +1,43 @@
+.hamburger {
+    display: none;
+
+    @include for-tablet-landscape {
+        display: block;
+        position: fixed;
+        width: 4rem;
+        height: 4rem;
+        top: 6%;
+        right: 5%;
+        border: none;
+        border-radius: 50%;
+        box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        z-index: 100;
+
+        & > i {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.close {
+    display: none;
+
+    @include for-tablet-landscape {
+        display: block;
+        position: absolute;
+        width: 4rem;
+        height: 4rem;
+        top: 6%;
+        right: 5%;
+        border: none;
+        border-radius: 50%;
+        box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        z-index: 200;
+
+        & > i {
+            font-size: 1.8rem;
+        }
+    }
+}

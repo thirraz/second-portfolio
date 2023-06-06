@@ -1,0 +1,16 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--color-background);
+    display: grid;
+    grid-template-rows: 95vh min-content;
+
+    @include for-tablet-landscape {
+        padding: 0 3rem;
+    }
+
+    @include for-phones {
+    }
+}
