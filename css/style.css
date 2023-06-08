@@ -259,6 +259,10 @@ body {
   cursor: pointer;
   position: relative;
   z-index: 80;
+  transition: transform 0.3s ease;
+}
+.works__project:hover {
+  transform: scale(1.05);
 }
 .works__project::after {
   content: attr(title);
