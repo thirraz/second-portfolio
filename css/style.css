@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .brazil__gradient {
   font-weight: bold;
   background: linear-gradient(to right, #009638, #e0c600);
@@ -232,7 +233,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   grid-template-rows: min-content repeat(3, 28rem);
   justify-content: center;
-  grid-auto-rows: 28rem;
+  grid-auto-rows: 1fr;
   gap: 2rem;
   margin-bottom: 6rem;
   max-width: 80%;
@@ -326,6 +327,61 @@ body {
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8) 80%), url(/images/projects/styledComponents.png);
   background-position: center;
   background-size: cover;
+}
+
+.star {
+  margin-top: 5rem;
+  grid-column: 1/-1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 10rem;
+}
+.star h4 {
+  font-family: var(--font-text);
+  font-size: 3rem;
+  font-style: italic;
+}
+.star__heading {
+  font-size: clamp(2rem, 8vh, 6rem);
+  font-family: var(--font-heading);
+  color: var(--color-black);
+  padding-bottom: 3rem;
+  border-bottom: 3px dashed black;
+}
+.star__project {
+  display: block;
+  max-width: 60%;
+  min-width: 55%;
+  min-height: 28rem;
+  height: 28rem;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8) 80%), url(/images/projects/wildOasis.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  position: relative;
+  transition: transform 0.17s ease-in-out;
+}
+.star__project:hover {
+  transform: scale(1.04);
+}
+.star__project::before {
+  content: "🌟";
+  font-size: 8rem;
+  position: absolute;
+  left: -8%;
+  top: -7%;
+  transform: rotate(23deg);
+}
+.star__project::after {
+  content: "🌟";
+  font-size: 8rem;
+  position: absolute;
+  right: -8%;
+  bottom: -7%;
+  transform: rotate(-23deg);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,7 +3,7 @@
     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
     grid-template-rows: min-content repeat(3, 28rem);
     justify-content: center;
-    grid-auto-rows: 28rem;
+    grid-auto-rows: 1fr;
     gap: 2rem;
     // padding: 0 3rem;
     margin-bottom: 6rem;

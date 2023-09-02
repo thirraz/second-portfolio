@@ -1,0 +1,64 @@
+.star {
+  margin-top: 5rem;
+  grid-column: 1/-1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 4rem;
+
+  margin-bottom: 10rem;
+
+  & h4 {
+    font-family: var(--font-text);
+    font-size: 3rem;
+    font-style: italic;
+  }
+
+  &__heading {
+    font-size: clamp(2rem, 8vh, 6rem);
+    font-family: var(--font-heading);
+    color: var(--color-black);
+    padding-bottom: 3rem;
+    border-bottom: 3px dashed black;
+  }
+
+  &__project {
+    display: block;
+    max-width: 60%;
+    min-width: 55%;
+    min-height: 28rem;
+    height: 28rem;
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8) 80%),
+      url(/images/projects/wildOasis.png);
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 5px;
+    position: relative;
+
+    transition: transform 0.17s ease-in-out;
+
+    &:hover {
+      transform: scale(1.04);
+    }
+
+    &::before {
+      content: "🌟";
+      font-size: 8rem;
+      position: absolute;
+      left: -8%;
+      top: -7%;
+      transform: rotate(23deg);
+    }
+    &::after {
+      content: "🌟";
+      font-size: 8rem;
+      position: absolute;
+      right: -8%;
+      bottom: -7%;
+      transform: rotate(-23deg);
+    }
+  }
+}
