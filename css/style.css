@@ -22,7 +22,7 @@
 :root {
   --color-black: #000;
   --color-grey: #272727;
-  --color-background: #e2e2e2;
+  --color-background: #fffff4;
   --font-heading: "DM Serif Display", serif;
   --font-text: "DM Sans", sans-serif;
   --font-size-heading: clamp(2rem, 6rem, 7rem);
@@ -216,16 +216,16 @@ body {
   margin-right: 1rem;
 }
 .presentation__languages i:nth-child(1) {
-  color: #dd4b25;
+  color: #5ed3f3;
 }
 .presentation__languages i:nth-child(2) {
-  color: #254bdd;
-}
-.presentation__languages i:nth-child(3) {
   color: #c5b62d;
 }
-.presentation__languages i:nth-child(4) {
+.presentation__languages i:nth-child(3) {
   color: #c26191;
+}
+.presentation__languages i:nth-child(4) {
+  color: #4ea759;
 }
 
 .works {
